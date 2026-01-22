@@ -3,245 +3,431 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wetonku — Privacy Policy</title>
-  <meta name="description" content="Wetonku: kalkulator weton (Pawukon) offline + cek jodoh (Mod 8). Halaman privacy policy & informasi aplikasi." />
+  <title>Wetonku — Privacy Policy & Info</title>
+  <meta name="description" content="Wetonku adalah aplikasi hitung weton (Pawukon) offline. Halaman ini berisi Privacy Policy, About, Contact, dan Disclaimer." />
+
   <style>
     :root{
       --ivory:#F7F1E8;
       --paper:#FFF8F0;
       --ink:#1B1B1B;
+      --muted:#5D564D;
+
       --coffee:#7A4A12;
       --coffee2:#4A2B10;
       --gold:#C9A24A;
-      --line:#E7D9C6;
-      --muted:#5C554C;
-      --shadow: 0 14px 35px rgba(38,24,10,.08);
+
+      --line:#E2D3BF;
+      --line2:#EADFCC;
+
+      --r:18px;
+      --shadow: 0 12px 30px rgba(30, 20, 10, .08);
+      --shadow2: 0 8px 16px rgba(30, 20, 10, .06);
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% -10%, #fff 0%, var(--ivory) 55%, #f3eadc 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--ink);
-      line-height:1.65;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(201,162,74,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(122,74,18,.12), transparent 55%),
+        linear-gradient(180deg, var(--ivory), #F4EBDD 120%);
     }
+
     a{color:var(--coffee); text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:980px; margin:0 auto; padding:22px 16px 60px}
 
-    /* top ornament */
-    .topbar{
-      position:sticky; top:0; z-index:10;
-      background: rgba(247,241,232,.86);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(231,217,198,.75);
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:24px 16px 60px;
+      position:relative;
     }
-    .topbar .inner{max-width:980px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:10px}
+
+    /* Batik-ish backdrop (subtle) */
+    .bg{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.28;
+      background-image:
+        radial-gradient(circle at 18px 18px, rgba(122,74,18,.18) 1.2px, transparent 1.3px),
+        radial-gradient(circle at 18px 18px, rgba(201,162,74,.14) 4px, transparent 4.2px),
+        radial-gradient(circle at 58px 58px, rgba(122,74,18,.10) 1.2px, transparent 1.3px);
+      background-size: 96px 96px;
+      filter: blur(.1px);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-top:8px;
+      margin-bottom:14px;
+    }
+
     .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:900; letter-spacing:.3px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
     }
     .seal{
-      width:34px; height:34px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(122,74,18,.18), rgba(201,162,74,.14));
-      border:1px solid rgba(122,74,18,.22);
-      display:grid; place-items:center;
-      box-shadow: 0 8px 18px rgba(38,24,10,.08);
+      width:44px;height:44px;
+      border-radius:14px;
+      background:
+        radial-gradient(30px 30px at 30% 30%, rgba(201,162,74,.30), transparent 60%),
+        linear-gradient(135deg, rgba(122,74,18,.22), rgba(201,162,74,.12));
+      border:1px solid rgba(226,211,191,.9);
+      box-shadow: var(--shadow2);
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
     }
-    .nav{display:flex; gap:10px; flex-wrap:wrap}
-    .nav a{
-      font-size:13px;
-      padding:8px 12px;
+    .seal:before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        conic-gradient(from 0deg, rgba(122,74,18,.14), rgba(201,162,74,.14), rgba(122,74,18,.14));
+      animation: spin 14s linear infinite;
+      opacity:.5;
+    }
+    .seal span{
+      position:relative;
+      font-weight:900;
+      letter-spacing:.5px;
+      color:var(--coffee2);
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .brand h1{
+      margin:0;
+      font-size:18px;
+      font-weight:900;
+      letter-spacing:.2px;
+      line-height:1.1;
+    }
+    .brand p{
+      margin:2px 0 0;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:650;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+    }
+    .navlink{
+      padding:10px 12px;
       border-radius:999px;
-      border:1px solid rgba(231,217,198,.9);
-      background: rgba(255,248,240,.7);
-      color: var(--coffee2);
+      border:1px solid rgba(226,211,191,.9);
+      background: rgba(255,248,240,.72);
+      box-shadow: 0 6px 14px rgba(30, 20, 10, .05);
       font-weight:800;
+      font-size:13px;
+      color:var(--coffee2);
     }
 
     .hero{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
-
-    .card{
-      background: rgba(255,248,240,.92);
-      border:1px solid rgba(231,217,198,.95);
-      border-radius:22px;
+      border-radius: calc(var(--r) + 6px);
+      border:1px solid rgba(226,211,191,.95);
+      background:
+        linear-gradient(180deg, rgba(255,248,240,.86), rgba(247,241,232,.92));
       box-shadow: var(--shadow);
       overflow:hidden;
+      position:relative;
     }
-    .card .pad{padding:18px 18px}
-    .title{
-      font-size:34px; line-height:1.12; margin:0 0 6px;
-      font-weight:950; letter-spacing:.2px;
+    .hero .topline{
+      height:10px;
+      background: linear-gradient(90deg, rgba(201,162,74,.55), rgba(122,74,18,.45));
+      opacity:.9;
     }
-    .subtitle{margin:0; color:var(--muted); font-weight:650}
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-    .chip{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(122,74,18,.18);
-      background: linear-gradient(180deg, rgba(122,74,18,.10), rgba(201,162,74,.08));
-      color: var(--coffee2);
-      font-weight:850;
+    .hero .pad{padding:18px 18px 16px}
+    .hero h2{
+      margin:0 0 6px;
+      font-size:24px;
+      font-weight:950;
+      letter-spacing:.2px;
     }
-    .orn{
-      height:12px;
-      background:
-        radial-gradient(circle at 8px 6px, rgba(201,162,74,.45) 2px, transparent 3px),
-        radial-gradient(circle at 20px 6px, rgba(122,74,18,.35) 2px, transparent 3px),
-        linear-gradient(90deg, rgba(231,217,198,.0), rgba(231,217,198,.95), rgba(231,217,198,.0));
-      background-size:28px 12px, 28px 12px, 100% 1px;
-      background-position:0 0, 10px 0, 0 11px;
-      background-repeat:repeat, repeat, no-repeat;
+    .hero .desc{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      line-height:1.5;
+      max-width:70ch;
     }
-
-    h2{margin:0 0 6px; font-size:18px; font-weight:950}
-    h3{margin:14px 0 6px; font-size:14px; font-weight:950}
-    p{margin:8px 0}
-    ul{margin:8px 0 0 18px}
-
-    .grid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
-
-    .mini{
-      font-size:13px;
-      color: var(--muted);
+    .hero .badges{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top:12px;
     }
     .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:10px 12px;
-      border-radius:16px;
-      border:1px solid rgba(231,217,198,.95);
-      background: rgba(255,248,240,.78);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(234,223,204,.95);
+      background: rgba(255,253,249,.75);
+      font-size:12px;
+      font-weight:800;
+      color:var(--coffee2);
     }
     .dot{
-      width:10px; height:10px; border-radius:99px;
-      background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(201,162,74,.14);
+      width:8px;height:8px;border-radius:99px;
+      background: rgba(201,162,74,.9);
+      box-shadow: 0 0 0 3px rgba(201,162,74,.18);
     }
-    footer{
-      margin-top:22px;
-      padding-top:16px;
-      border-top:1px solid rgba(231,217,198,.9);
-      color: var(--muted);
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: 1.1fr .9fr; }
+    }
+
+    .card{
+      border-radius: calc(var(--r) + 2px);
+      border:1px solid rgba(226,211,191,.95);
+      background: rgba(255,248,240,.88);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+    }
+    .card .orn{
+      height:12px;
+      background:
+        linear-gradient(90deg, rgba(201,162,74,.35), rgba(122,74,18,.25));
+      opacity:.9;
+    }
+    .card .pad{padding:16px}
+    .card h3{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:950;
+      letter-spacing:.2px;
+    }
+    .card p, .card li{
+      color:#2b2824;
+      line-height:1.6;
+      font-weight:600;
+      margin:0;
+    }
+    .card p + p{margin-top:10px}
+    .card ul{margin:10px 0 0; padding-left:18px}
+    .card li{margin:6px 0}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(234,223,204,.95);
+      background: rgba(255,253,249,.7);
+      font-weight:850;
       font-size:12px;
+      color:var(--coffee2);
     }
-    code{background:#f2eee7; padding:2px 6px; border-radius:6px}
+
+    .mini{
+      margin-top:10px;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:650;
+    }
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .95em;
+      background: rgba(226,211,191,.35);
+      padding:2px 6px;
+      border-radius:8px;
+    }
+
+    footer{
+      margin-top:18px;
+      color:rgba(27,27,27,.65);
+      font-weight:650;
+      font-size:12px;
+      text-align:center;
+    }
+    .hr{
+      height:1px;
+      background: rgba(226,211,191,.9);
+      margin:14px 0;
+    }
   </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="inner">
-      <div class="brand">
-        <div class="seal">✦</div>
-        <div>Wetonku</div>
-      </div>
-      <div class="nav">
-        <a href="#about">Tentang</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#contact">Kontak</a>
-        <a href="#disclaimer">Disclaimer</a>
-      </div>
-    </div>
-  </div>
+  <div class="bg"></div>
 
   <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="seal" aria-hidden="true"><span>W</span></div>
+        <div>
+          <h1>Wetonku</h1>
+          <p>Halaman legal & info (Play Console)</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navigasi">
+        <a class="navlink" href="#privacy">Privacy Policy</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#contact">Contact</a>
+        <a class="navlink" href="#disclaimer">Disclaimer</a>
+      </nav>
+    </header>
+
     <section class="hero">
-      <div class="card">
+      <div class="topline"></div>
+      <div class="pad">
+        <h2>Wetonku — Pawukon (Offline)</h2>
+        <p class="desc">
+          Aplikasi hitung weton (hari, pasaran, wuku, neptu) dan cek kecocokan (Mod 8)
+          yang berjalan sepenuhnya <b>offline</b>. Halaman ini disiapkan untuk kebutuhan
+          <b>Privacy Policy</b> dan <b>Developer Website</b> di Google Play Console.
+        </p>
+        <div class="badges">
+          <span class="badge"><span class="dot"></span> Offline (tanpa akun / login)</span>
+          <span class="badge"><span class="dot"></span> Tanpa pengumpulan data pengguna</span>
+          <span class="badge"><span class="dot"></span> Edukasi budaya</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <section id="privacy" class="card">
         <div class="orn"></div>
         <div class="pad">
-          <h1 class="title">Wetonku</h1>
-          <p class="subtitle">Kalkulator Weton (Pawukon) <b>offline</b> + cek kecocokan <b>Mod 8</b>. Ringan, cepat, tanpa login.</p>
-          <div class="chips">
-            <span class="chip">Offline (tanpa server)</span>
-            <span class="chip">Tanpa akun</span>
-            <span class="chip">Tanpa iklan (MVP)</span>
-            <span class="chip">Budaya/Edukasi</span>
+          <h3>Privacy Policy</h3>
+          <p class="mini">Tanggal efektif: <span id="effective"></span></p>
+
+          <p>
+            Wetonku menghormati privasi Anda. Aplikasi ini dirancang untuk berfungsi secara
+            <b>offline</b> dan <b>tidak mewajibkan pembuatan akun</b>.
+          </p>
+
+          <div class="hr"></div>
+
+          <p><span class="pill">1) Data yang kami kumpulkan</span></p>
+          <p>
+            <b>Kami tidak mengumpulkan data pribadi</b> (misalnya nama, email, nomor telepon),
+            dan tidak memiliki fitur login.
+          </p>
+
+          <p><span class="pill">2) Data yang disimpan di perangkat</span></p>
+          <p>
+            Aplikasi dapat menyimpan <b>preferensi</b> atau <b>riwayat sederhana</b> secara lokal
+            di perangkat Anda (jika fitur itu diaktifkan). Data lokal ini tidak dikirim ke server mana pun.
+          </p>
+
+          <p><span class="pill">3) Pihak ketiga</span></p>
+          <p>
+            Wetonku tidak membagikan data Anda ke pihak ketiga. Aplikasi ini tidak menggunakan layanan
+            analitik pihak ketiga untuk melacak aktivitas pengguna (untuk versi offline ini).
+          </p>
+
+          <p><span class="pill">4) Izin perangkat</span></p>
+          <p>
+            Wetonku tidak memerlukan izin sensitif. Jika di masa depan ada fitur yang memerlukan izin tertentu,
+            kami akan menjelaskan tujuannya secara jelas di aplikasi dan memperbarui kebijakan ini.
+          </p>
+
+          <p><span class="pill">5) Keamanan</span></p>
+          <p>
+            Karena tidak ada pengiriman data ke server, risiko transmisi data sangat minim. Tetap jaga keamanan perangkat Anda
+            (PIN/biometrik) untuk melindungi data lokal.
+          </p>
+
+          <p><span class="pill">6) Perubahan kebijakan</span></p>
+          <p>
+            Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan akan ditampilkan di halaman ini dengan tanggal efektif terbaru.
+          </p>
+
+          <p><span class="pill">7) Kontak</span></p>
+          <p>
+            Jika ada pertanyaan terkait privasi, silakan hubungi kami melalui email pada bagian <a href="#contact">Kontak</a>.
+          </p>
+
+          <p class="mini">
+            Catatan: Jika suatu saat Anda menambahkan iklan/analytics/login, bagian ini harus diperbarui sesuai implementasi.
+          </p>
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <div>
+        <section id="about" class="card">
+          <div class="orn"></div>
+          <div class="pad">
+            <h3>About Wetonku</h3>
+            <p>
+              Wetonku membantu Anda menghitung weton berdasarkan tanggal lahir dan menampilkan ringkasan makna
+              (hari/pasaran/wuku) secara ringan.
+            </p>
+            <ul>
+              <li>Hitung: Hari, Pasaran, Wuku, Neptu (offline)</li>
+              <li>Cek Jodoh: kategori kecocokan berbasis <b>Mod 8</b></li>
+              <li>Kalender Jawa: daftar harian dengan ringkasan (baik/netral/waspada)</li>
+            </ul>
+            <p class="mini">
+              Semua hasil merupakan interpretasi budaya, bukan prediksi ilmiah.
+            </p>
           </div>
-        </div>
+        </section>
+
+        <section id="disclaimer" class="card" style="margin-top:14px">
+          <div class="orn"></div>
+          <div class="pad">
+            <h3>Disclaimer</h3>
+            <p>
+              Hasil perhitungan bersifat <b>budaya/edukasi</b> dan <b>bukan kepastian</b>.
+              Gunakan sebagai referensi ringan.
+            </p>
+            <p class="mini">
+              Wetonku tidak memberikan saran medis, hukum, atau finansial.
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <div class="orn"></div>
+          <div class="pad">
+            <h3>Kontak</h3>
+            <p>Email: <a href="mailto:hello@aifinance.biz.id">hello@aifinance.biz.id</a></p>
+            <p class="mini">
+              Gunakan email ini juga untuk kebutuhan Play Console (support / privacy inquiry).
+            </p>
+          </div>
+        </section>
       </div>
-
-      <div class="card">
-        <div class="orn"></div>
-        <div class="pad">
-          <h2>Ringkas</h2>
-          <div class="badge"><span class="dot"></span><div class="mini"><b>Privacy Policy</b> tersedia di halaman ini.</div></div>
-          <div style="height:10px"></div>
-          <div class="badge"><span class="dot"></span><div class="mini"><b>Developer Website</b> bisa pakai URL yang sama.</div></div>
-          <div style="height:10px"></div>
-          <div class="badge"><span class="dot"></span><div class="mini"><b>Kontak</b> ada di bagian bawah.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="grid">
-      <div class="card">
-        <div class="orn"></div>
-        <div class="pad">
-          <h2>Tentang Wetonku</h2>
-          <p>Wetonku membantu menghitung <b>Hari</b>, <b>Pasaran</b>, <b>Wuku</b>, dan <b>Neptu</b> berdasarkan tanggal.</p>
-          <p>Fitur tambahan: <b>Cek Jodoh (Mod 8)</b> dari total neptu dua tanggal untuk melihat kategori & saran.</p>
-          <p class="mini">Catatan: hasil bersifat budaya/edukasi (bukan kepastian).</p>
-        </div>
-      </div>
-
-      <div class="card" id="privacy">
-        <div class="orn"></div>
-        <div class="pad">
-          <h2>Privacy Policy</h2>
-          <p class="mini"><b>Efektif:</b> 2026-01-22</p>
-
-          <h3>1) Data yang dikumpulkan</h3>
-          <p>Wetonku <b>tidak mengumpulkan</b> data pribadi dan <b>tidak</b> menyediakan login/akun.</p>
-
-          <h3>2) Penyimpanan lokal</h3>
-          <p>Jika aplikasi menyimpan preferensi/riwayat, semuanya tersimpan <b>di perangkat</b> (lokal) dan tidak dikirim ke server.</p>
-
-          <h3>3) Pihak ketiga</h3>
-          <p>Wetonku <b>tidak membagikan</b> data ke pihak ketiga.</p>
-
-          <h3>4) Iklan & analitik</h3>
-          <p>Wetonku tidak menampilkan iklan dan tidak menggunakan analitik pihak ketiga (kecuali ditambahkan pada versi mendatang).</p>
-
-          <h3>5) Perubahan kebijakan</h3>
-          <p>Kebijakan ini dapat diperbarui bila ada perubahan fitur yang berdampak pada data.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="disclaimer" class="card" style="margin-top:14px">
-      <div class="orn"></div>
-      <div class="pad">
-        <h2>Disclaimer</h2>
-        <p>Hasil perhitungan bersifat <b>budaya/edukasi</b> dan <b>bukan kepastian</b>. Gunakan sebagai referensi ringan.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="card" style="margin-top:14px">
-      <div class="orn"></div>
-      <div class="pad">
-        <h2>Kontak</h2>
-        <p>Email: <a href="mailto:hello@aifinance.biz.id">hello@aifinance.biz.id</a></p>
-        <p class="mini">Ganti <code>hello@aifinance.biz.id</code> dengan hello@aifinance.biz.id.</p>
-      </div>
-    </section>
+    </div>
 
     <footer>
       © <span id="y"></span> Wetonku • Halaman ini untuk keperluan Play Console (Privacy Policy & Developer Website).
-      <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
     </footer>
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Tanggal efektif default: hari ini (silakan ubah manual kalau mau fix)
+    const d = new Date();
+    const months = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+    const effective = `${String(d.getDate()).padStart(2,"0")} ${months[d.getMonth()]} ${d.getFullYear()}`;
+    document.getElementById('effective').textContent = effective;
+  </script>
 </body>
 </html>
