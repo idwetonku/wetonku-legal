@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Wetonku</title>
+  <meta name="description" content="Privacy Policy untuk aplikasi Wetonku (offline weton & jodoh).">
+  <style>
+    :root{
+      --ivory:#F7F1E8;
+      --paper:#FFF8F0;
+      --ink:#1C1B1A;
+      --muted:#5D564F;
+      --coffee:#7A4A12;
+      --coffee2:#4A2B10;
+      --gold:#C9A24A;
+      --outline:#E5D6C2;
+      --shadow: 0 18px 40px rgba(28,27,26,.08);
+      --radius: 18px;
+      --radius2: 22px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      color:var(--ink);
+      background: var(--ivory);
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background:
+        radial-gradient(circle at 18px 18px, rgba(122,74,18,.16) 1px, transparent 2px) 0 0/48px 48px,
+        radial-gradient(circle at 30px 30px, rgba(201,162,74,.16) 1px, transparent 2px) 0 0/48px 48px,
+        linear-gradient(135deg, rgba(122,74,18,.06), transparent 40%, rgba(201,162,74,.06));
+    }
+    a{ color:var(--coffee); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      width:min(900px, 92vw);
+      margin:0 auto;
+      padding:24px 0 48px;
+      position:relative;
+    }
+
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 14px;
+      border-radius:999px;
+      background: rgba(255,248,240,.72);
+      border: 1px solid rgba(229,214,194,.9);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(28,27,26,.06);
+    }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:900; }
+    .seal{
+      width:32px; height:32px;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(201,162,74,.9), rgba(201,162,74,.1) 55%, transparent 60%),
+        linear-gradient(145deg, rgba(122,74,18,.95), rgba(74,43,16,.95));
+      border: 1px solid rgba(201,162,74,.55);
+    }
+    .btn{
+      padding:8px 12px;
+      border-radius:999px;
+      border: 1px solid rgba(229,214,194,.9);
+      background: rgba(255,248,240,.9);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .hero{
+      margin-top:14px;
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,248,240,.96), rgba(246,239,230,.86));
+      border: 1px solid rgba(229,214,194,.95);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .orn{
+      height:10px;
+      background: linear-gradient(90deg, rgba(201,162,74,0), rgba(201,162,74,.65), rgba(201,162,74,0));
+      opacity:.7;
+    }
+    .pad{ padding:18px; }
+
+    h1{ margin:0 0 8px; font-size:28px; letter-spacing:.2px; }
+    p{ margin:0 0 10px; color:var(--muted); line-height:1.6; font-weight:600; }
+
+    .card{
+      margin-top:14px;
+      border-radius: var(--radius);
+      background: rgba(255,248,240,.92);
+      border: 1px solid rgba(229,214,194,.95);
+      box-shadow: 0 10px 28px rgba(28,27,26,.06);
+      overflow:hidden;
+    }
+    h2{ margin:0 0 8px; font-size:16px; letter-spacing:.2px; }
+    ul{ margin:8px 0 0 18px; color:var(--muted); line-height:1.6; font-weight:600; }
+    li{ margin:6px 0; }
+    code{
+      background: rgba(122,74,18,.08);
+      padding:2px 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(122,74,18,.12);
+      font-weight:700;
+      color: var(--coffee2);
+    }
+    .meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .pill{
+      display:inline-flex;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(229,214,194,.95);
+      background: rgba(255,248,240,.92);
+      font-weight:900;
+      font-size:12px;
+    }
+    .pill.gold{
+      border-color: rgba(201,162,74,.55);
+      background: rgba(201,162,74,.14);
+      color: var(--coffee2);
+    }
+
+    footer{
+      margin-top:16px;
+      color:#6A635B;
+      font-size:12px;
+      text-align:center;
+      padding:14px 6px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="seal" aria-hidden="true"></div>
+        <div>Wetonku</div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn" href="index.html">← Landing Page</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="orn"></div>
+      <div class="pad">
+        <h1>Privacy Policy</h1>
+        <p>
+          Privacy Policy ini menjelaskan bagaimana aplikasi <b>Wetonku</b> menangani data pengguna.
+          Wetonku dirancang sebagai aplikasi <b>offline</b> untuk perhitungan weton (pawukon) dan cek jodoh (mod 8).
+        </p>
+        <div class="meta">
+          <div class="pill gold">Aplikasi Offline</div>
+          <div class="pill">Tanpa Login</div>
+          <div class="pill">Tanpa Pengumpulan Data</div>
+        </div>
+        <p style="margin-top:10px">
+          <b>Tanggal efektif:</b> <span id="effective"></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>1. Data yang Dikumpulkan</h2>
+        <p>
+          Wetonku <b>tidak mengumpulkan</b>, menyimpan, atau mengirim data pribadi pengguna ke server.
+          Tidak ada proses pendaftaran akun dan tidak ada login.
+        </p>
+        <ul>
+          <li><b>Data pribadi:</b> tidak dikumpulkan.</li>
+          <li><b>Lokasi:</b> tidak diakses.</li>
+          <li><b>Kontak:</b> tidak diakses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>2. Penyimpanan Lokal di Perangkat</h2>
+        <p>
+          Secara default, Wetonku melakukan perhitungan di perangkat (offline).
+          Jika pada versi tertentu ada penyimpanan lokal (misalnya preferensi tema/riwayat tanggal),
+          data tersebut tersimpan <b>hanya di perangkat</b> dan tidak dikirim ke pihak lain.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>3. Pihak Ketiga</h2>
+        <p>
+          Wetonku tidak membagikan data pengguna ke pihak ketiga.
+          Jika di masa depan Anda menambahkan layanan pihak ketiga (mis. analytics/iklan),
+          kebijakan ini akan diperbarui dan pengguna akan mendapatkan informasi yang relevan.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>4. Keamanan</h2>
+        <p>
+          Karena aplikasi berjalan offline tanpa pengiriman data, risiko paparan data berkurang.
+          Namun, keamanan perangkat pengguna (PIN/biometrik, dll.) tetap menjadi tanggung jawab pengguna.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>5. Kontak</h2>
+        <p>
+          Jika ada pertanyaan terkait kebijakan privasi ini, hubungi:
+          <br><a href="mailto:hello@aifinance.biz.id">hello@aifinance.biz.id</a>
+        </p>
+        <p><small>Ganti email ini dengan email dev kamu yang aktif.</small></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>6. Perubahan Kebijakan</h2>
+        <p>
+          Kami dapat memperbarui Privacy Policy ini dari waktu ke waktu.
+          Versi terbaru akan dipublikasikan di halaman ini dengan tanggal efektif yang diperbarui.
+        </p>
+        <p>
+          <b>Disclaimer:</b> hasil perhitungan bersifat <b>budaya/edukasi</b> dan <b>bukan kepastian</b>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Wetonku • Privacy Policy
+      <script>
+        document.getElementById('y').textContent=new Date().getFullYear();
+        // Set tanggal efektif otomatis (boleh diganti manual)
+        const d = new Date();
+        const months = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+        document.getElementById('effective').textContent =
+          `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+      </script>
+    </footer>
+  </div>
+</body>
+</html>
