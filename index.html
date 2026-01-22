@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wetonku — Privacy Policy</title>
+  <meta name="description" content="Wetonku: kalkulator weton (Pawukon) offline + cek jodoh (Mod 8). Halaman privacy policy & informasi aplikasi." />
+  <style>
+    :root{
+      --ivory:#F7F1E8;
+      --paper:#FFF8F0;
+      --ink:#1B1B1B;
+      --coffee:#7A4A12;
+      --coffee2:#4A2B10;
+      --gold:#C9A24A;
+      --line:#E7D9C6;
+      --muted:#5C554C;
+      --shadow: 0 14px 35px rgba(38,24,10,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, #fff 0%, var(--ivory) 55%, #f3eadc 100%);
+      color:var(--ink);
+      line-height:1.65;
+    }
+    a{color:var(--coffee); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:22px 16px 60px}
+
+    /* top ornament */
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      background: rgba(247,241,232,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(231,217,198,.75);
+    }
+    .topbar .inner{max-width:980px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:10px}
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.3px;
+    }
+    .seal{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(122,74,18,.18), rgba(201,162,74,.14));
+      border:1px solid rgba(122,74,18,.22);
+      display:grid; place-items:center;
+      box-shadow: 0 8px 18px rgba(38,24,10,.08);
+    }
+    .nav{display:flex; gap:10px; flex-wrap:wrap}
+    .nav a{
+      font-size:13px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(231,217,198,.9);
+      background: rgba(255,248,240,.7);
+      color: var(--coffee2);
+      font-weight:800;
+    }
+
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+
+    .card{
+      background: rgba(255,248,240,.92);
+      border:1px solid rgba(231,217,198,.95);
+      border-radius:22px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .pad{padding:18px 18px}
+    .title{
+      font-size:34px; line-height:1.12; margin:0 0 6px;
+      font-weight:950; letter-spacing:.2px;
+    }
+    .subtitle{margin:0; color:var(--muted); font-weight:650}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+    .chip{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(122,74,18,.18);
+      background: linear-gradient(180deg, rgba(122,74,18,.10), rgba(201,162,74,.08));
+      color: var(--coffee2);
+      font-weight:850;
+    }
+    .orn{
+      height:12px;
+      background:
+        radial-gradient(circle at 8px 6px, rgba(201,162,74,.45) 2px, transparent 3px),
+        radial-gradient(circle at 20px 6px, rgba(122,74,18,.35) 2px, transparent 3px),
+        linear-gradient(90deg, rgba(231,217,198,.0), rgba(231,217,198,.95), rgba(231,217,198,.0));
+      background-size:28px 12px, 28px 12px, 100% 1px;
+      background-position:0 0, 10px 0, 0 11px;
+      background-repeat:repeat, repeat, no-repeat;
+    }
+
+    h2{margin:0 0 6px; font-size:18px; font-weight:950}
+    h3{margin:14px 0 6px; font-size:14px; font-weight:950}
+    p{margin:8px 0}
+    ul{margin:8px 0 0 18px}
+
+    .grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+
+    .mini{
+      font-size:13px;
+      color: var(--muted);
+    }
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(231,217,198,.95);
+      background: rgba(255,248,240,.78);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(201,162,74,.14);
+    }
+    footer{
+      margin-top:22px;
+      padding-top:16px;
+      border-top:1px solid rgba(231,217,198,.9);
+      color: var(--muted);
+      font-size:12px;
+    }
+    code{background:#f2eee7; padding:2px 6px; border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="seal">✦</div>
+        <div>Wetonku</div>
+      </div>
+      <div class="nav">
+        <a href="#about">Tentang</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#contact">Kontak</a>
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="hero">
+      <div class="card">
+        <div class="orn"></div>
+        <div class="pad">
+          <h1 class="title">Wetonku</h1>
+          <p class="subtitle">Kalkulator Weton (Pawukon) <b>offline</b> + cek kecocokan <b>Mod 8</b>. Ringan, cepat, tanpa login.</p>
+          <div class="chips">
+            <span class="chip">Offline (tanpa server)</span>
+            <span class="chip">Tanpa akun</span>
+            <span class="chip">Tanpa iklan (MVP)</span>
+            <span class="chip">Budaya/Edukasi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="orn"></div>
+        <div class="pad">
+          <h2>Ringkas</h2>
+          <div class="badge"><span class="dot"></span><div class="mini"><b>Privacy Policy</b> tersedia di halaman ini.</div></div>
+          <div style="height:10px"></div>
+          <div class="badge"><span class="dot"></span><div class="mini"><b>Developer Website</b> bisa pakai URL yang sama.</div></div>
+          <div style="height:10px"></div>
+          <div class="badge"><span class="dot"></span><div class="mini"><b>Kontak</b> ada di bagian bawah.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="grid">
+      <div class="card">
+        <div class="orn"></div>
+        <div class="pad">
+          <h2>Tentang Wetonku</h2>
+          <p>Wetonku membantu menghitung <b>Hari</b>, <b>Pasaran</b>, <b>Wuku</b>, dan <b>Neptu</b> berdasarkan tanggal.</p>
+          <p>Fitur tambahan: <b>Cek Jodoh (Mod 8)</b> dari total neptu dua tanggal untuk melihat kategori & saran.</p>
+          <p class="mini">Catatan: hasil bersifat budaya/edukasi (bukan kepastian).</p>
+        </div>
+      </div>
+
+      <div class="card" id="privacy">
+        <div class="orn"></div>
+        <div class="pad">
+          <h2>Privacy Policy</h2>
+          <p class="mini"><b>Efektif:</b> 2026-01-22</p>
+
+          <h3>1) Data yang dikumpulkan</h3>
+          <p>Wetonku <b>tidak mengumpulkan</b> data pribadi dan <b>tidak</b> menyediakan login/akun.</p>
+
+          <h3>2) Penyimpanan lokal</h3>
+          <p>Jika aplikasi menyimpan preferensi/riwayat, semuanya tersimpan <b>di perangkat</b> (lokal) dan tidak dikirim ke server.</p>
+
+          <h3>3) Pihak ketiga</h3>
+          <p>Wetonku <b>tidak membagikan</b> data ke pihak ketiga.</p>
+
+          <h3>4) Iklan & analitik</h3>
+          <p>Wetonku tidak menampilkan iklan dan tidak menggunakan analitik pihak ketiga (kecuali ditambahkan pada versi mendatang).</p>
+
+          <h3>5) Perubahan kebijakan</h3>
+          <p>Kebijakan ini dapat diperbarui bila ada perubahan fitur yang berdampak pada data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="disclaimer" class="card" style="margin-top:14px">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>Disclaimer</h2>
+        <p>Hasil perhitungan bersifat <b>budaya/edukasi</b> dan <b>bukan kepastian</b>. Gunakan sebagai referensi ringan.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:14px">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>Kontak</h2>
+        <p>Email: <a href="mailto:EMAIL_KAMU">EMAIL_KAMU</a></p>
+        <p class="mini">Ganti <code>EMAIL_KAMU</code> dengan email kamu.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Wetonku • Halaman ini untuk keperluan Play Console (Privacy Policy & Developer Website).
+      <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+    </footer>
+  </div>
+</body>
+</html>
