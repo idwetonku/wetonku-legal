@@ -4,6 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Wetonku — Kalkulator Weton (Pawukon) & Cek Jodoh (Mod 8). Offline, budaya/edukasi." />
+  <meta name="theme-color" content="#7A4A12" />
+
+  <!-- Disarankan: set canonical sesuai URL GitHub Pages kamu -->
+  <link rel="canonical" href="https://idwetonku.github.io/wetonku-legal/" />
+
   <title>Wetonku — Legal</title>
 
   <style>
@@ -38,6 +43,28 @@
 
     a{color:inherit; text-decoration:none}
     a:hover{opacity:.92}
+    a:focus-visible{
+      outline: 3px solid rgba(201,162,74,.7);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    /* Skip link (a11y) */
+    .skip{
+      position:absolute;
+      left:-999px; top:auto;
+      width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:12px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      border-radius:999px;
+      background: rgba(255,250,243,.96);
+      border:1px solid var(--line);
+      z-index: 9999;
+      box-shadow: var(--shadow);
+    }
 
     .wrap{
       max-width: 1080px;
@@ -110,7 +137,7 @@
       position:absolute;
       inset:0;
       opacity:.18;
-      pointer-events:none; /* penting: jangan nutup klik */
+      pointer-events:none;
       background-image:
         radial-gradient(circle at 10px 10px, rgba(122,74,18,.35) 1px, transparent 2px),
         radial-gradient(circle at 30px 30px, rgba(201,162,74,.35) 1px, transparent 2px);
@@ -230,7 +257,7 @@
       position:absolute;
       inset:0;
       opacity:.10;
-      pointer-events:none; /* penting */
+      pointer-events:none;
       background-image:
         linear-gradient(45deg, rgba(122,74,18,.35) 1px, transparent 1px),
         linear-gradient(-45deg, rgba(201,162,74,.30) 1px, transparent 1px);
@@ -269,6 +296,8 @@
 </head>
 
 <body>
+  <a class="skip" href="#content">Lewati ke konten utama</a>
+
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
@@ -276,8 +305,7 @@
         <div>Wetonku</div>
       </div>
 
-      <nav class="nav">
-        <!-- ini yang bikin bisa diklik -->
+      <nav class="nav" aria-label="Navigasi utama">
         <a href="#about">About</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="#contact">Kontak</a>
@@ -285,7 +313,7 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <main id="content" class="wrap">
     <section class="hero" aria-label="Wetonku">
       <div class="orn"></div>
       <div class="hero-inner">
@@ -304,9 +332,10 @@
           </div>
 
           <div class="mini">
-            Untuk keperluan Play Console, gunakan:
-            <br>• Developer Website: <code>…/wetonku-legal/</code>
-            <br>• Privacy Policy URL: <code>…/wetonku-legal/privacy.html</code>
+            Untuk kebutuhan Play Console:
+            <br>• Developer Website: <code>https://idwetonku.github.io/wetonku-legal/</code>
+            <br>• Privacy Policy URL: <code>https://idwetonku.github.io/wetonku-legal/privacy.html</code>
+            <br>• Terakhir diperbarui: <b>1 Februari 2026</b>
           </div>
         </div>
 
@@ -327,7 +356,6 @@
       </div>
     </section>
 
-    <!-- WAJIB: id harus sama dengan href -->
     <section id="about" class="card" style="margin-top:14px">
       <div class="orn"></div>
       <div class="pad">
@@ -336,7 +364,7 @@
           Wetonku membantu pengguna melihat perhitungan pawukon secara cepat:
           <b>hari</b>, <b>pasaran</b>, <b>wuku</b>, dan <b>neptu</b>.
           Semua proses dilakukan di perangkat (offline).
-          Wetonku tidak meminta akun, tidak mengumpulkan data pribadi, dan cocok untuk penggunaan ringan/edukasi budaya.
+          Wetonku tidak meminta akun dan tidak mengumpulkan data pribadi.
         </p>
       </div>
     </section>
@@ -351,7 +379,7 @@
             Gunakan sebagai referensi ringan, bukan dasar keputusan penting.
           </p>
           <p class="mini" style="margin-top:10px">
-            Jika kamu menambahkan fitur online di versi berikutnya, Privacy Policy perlu diperbarui.
+            Jika suatu saat ada fitur online/akun/analytics, halaman Privacy Policy akan diperbarui.
           </p>
         </div>
       </section>
@@ -361,25 +389,24 @@
         <div class="pad">
           <h2>Privacy Policy</h2>
           <p>
-            Lihat kebijakan privasi lengkap di halaman:
-            <b><a href="privacy.html" style="text-decoration:underline">privacy.html</a></b>.
+            Lihat kebijakan privasi lengkap di:
+            <b><a href="privacy.html" style="text-decoration:underline">privacy.html</a></b>
           </p>
         </div>
       </section>
     </div>
 
-    <!-- WAJIB: id harus sama dengan href -->
     <section id="contact" class="card" style="margin-top:14px">
       <div class="orn"></div>
       <div class="pad">
         <h2>Kontak</h2>
         <p>Email: <a href="mailto:hello@aifinance.biz.id" style="text-decoration:underline"><b>hello@aifinance.biz.id</b></a></p>
-        <p class="mini">Gunakan email developer yang aktif untuk keperluan Play Console.</p>
+        <p class="mini">Saran: samakan dengan “Developer email” di Google Play Console.</p>
       </div>
     </section>
 
     <footer>
-      © <span id="y"></span> Wetonku • Halaman ini untuk keperluan Play Console (Privacy Policy &amp; Developer Website).
+      © <span id="y"></span> Wetonku • Halaman legal untuk Play Console (Developer Website &amp; Privacy Policy).
       <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
     </footer>
   </main>
