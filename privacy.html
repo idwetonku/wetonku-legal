@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Wetonku</title>
   <meta name="description" content="Privacy Policy untuk aplikasi Wetonku (offline weton & jodoh).">
+  <meta name="theme-color" content="#7A4A12" />
+
+  <link rel="canonical" href="https://idwetonku.github.io/wetonku-legal/privacy.html" />
+
   <style>
     :root{
       --ivory:#F7F1E8;
@@ -39,6 +43,11 @@
     }
     a{ color:var(--coffee); text-decoration:none; }
     a:hover{ text-decoration:underline; }
+    a:focus-visible{
+      outline: 3px solid rgba(201,162,74,.7);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
 
     .wrap{
       width:min(900px, 92vw);
@@ -165,13 +174,16 @@
           Privacy Policy ini menjelaskan bagaimana aplikasi <b>Wetonku</b> menangani data pengguna.
           Wetonku dirancang sebagai aplikasi <b>offline</b> untuk perhitungan weton (pawukon) dan cek jodoh (mod 8).
         </p>
+
         <div class="meta">
           <div class="pill gold">Aplikasi Offline</div>
           <div class="pill">Tanpa Login</div>
           <div class="pill">Tanpa Pengumpulan Data</div>
         </div>
+
         <p style="margin-top:10px">
-          <b>Tanggal efektif:</b> <span id="effective"></span>
+          <b>Tanggal efektif:</b> 1 Februari 2026<br>
+          <b>Terakhir diperbarui:</b> 1 Februari 2026
         </p>
       </div>
     </section>
@@ -195,11 +207,15 @@
     <section class="card">
       <div class="orn"></div>
       <div class="pad">
-        <h2>2. Penyimpanan Lokal di Perangkat</h2>
+        <h2>2. Pemrosesan Offline & Penyimpanan Lokal</h2>
         <p>
-          Secara default, Wetonku melakukan perhitungan di perangkat (offline).
+          Semua perhitungan dilakukan di perangkat (offline).
           Jika pada versi tertentu ada penyimpanan lokal (misalnya preferensi tema/riwayat tanggal),
           data tersebut tersimpan <b>hanya di perangkat</b> dan tidak dikirim ke pihak lain.
+        </p>
+        <p>
+          Untuk menghapus data lokal (jika ada), pengguna dapat menghapus data aplikasi melalui pengaturan perangkat
+          atau meng-uninstall aplikasi.
         </p>
       </div>
     </section>
@@ -207,10 +223,22 @@
     <section class="card">
       <div class="orn"></div>
       <div class="pad">
-        <h2>3. Pihak Ketiga</h2>
+        <h2>3. Tautan Eksternal (Browser/Email)</h2>
+        <p>
+          Aplikasi dapat membuka tautan (misalnya halaman legal ini) atau membuka aplikasi email saat pengguna menekan tombol tertentu.
+          Saat tautan dibuka, pengguna mungkin berpindah ke aplikasi lain (browser/email).
+          Wetonku tidak mengirim data pribadi ke server.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="orn"></div>
+      <div class="pad">
+        <h2>4. Pihak Ketiga</h2>
         <p>
           Wetonku tidak membagikan data pengguna ke pihak ketiga.
-          Jika di masa depan Anda menambahkan layanan pihak ketiga (mis. analytics/iklan),
+          Jika di masa depan ada penambahan layanan pihak ketiga (mis. analytics/iklan),
           kebijakan ini akan diperbarui dan pengguna akan mendapatkan informasi yang relevan.
         </p>
       </div>
@@ -219,7 +247,7 @@
     <section class="card">
       <div class="orn"></div>
       <div class="pad">
-        <h2>4. Keamanan</h2>
+        <h2>5. Keamanan</h2>
         <p>
           Karena aplikasi berjalan offline tanpa pengiriman data, risiko paparan data berkurang.
           Namun, keamanan perangkat pengguna (PIN/biometrik, dll.) tetap menjadi tanggung jawab pengguna.
@@ -230,22 +258,22 @@
     <section class="card">
       <div class="orn"></div>
       <div class="pad">
-        <h2>5. Kontak</h2>
+        <h2>6. Kontak</h2>
         <p>
           Jika ada pertanyaan terkait kebijakan privasi ini, hubungi:
           <br><a href="mailto:hello@aifinance.biz.id">hello@aifinance.biz.id</a>
         </p>
-        <p><small>Ganti email ini dengan email dev kamu yang aktif.</small></p>
+        <p><small>Saran: pakai email yang sama dengan “Developer email” di Play Console.</small></p>
       </div>
     </section>
 
     <section class="card">
       <div class="orn"></div>
       <div class="pad">
-        <h2>6. Perubahan Kebijakan</h2>
+        <h2>7. Perubahan Kebijakan</h2>
         <p>
           Kami dapat memperbarui Privacy Policy ini dari waktu ke waktu.
-          Versi terbaru akan dipublikasikan di halaman ini dengan tanggal efektif yang diperbarui.
+          Versi terbaru akan dipublikasikan di halaman ini beserta tanggal efektif yang diperbarui.
         </p>
         <p>
           <b>Disclaimer:</b> hasil perhitungan bersifat <b>budaya/edukasi</b> dan <b>bukan kepastian</b>.
@@ -255,14 +283,7 @@
 
     <footer>
       © <span id="y"></span> Wetonku • Privacy Policy
-      <script>
-        document.getElementById('y').textContent=new Date().getFullYear();
-        // Set tanggal efektif otomatis (boleh diganti manual)
-        const d = new Date();
-        const months = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
-        document.getElementById('effective').textContent =
-          `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
-      </script>
+      <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
     </footer>
   </div>
 </body>
